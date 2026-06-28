@@ -1,0 +1,50 @@
+{
+  "name": "solana-web3-wallet-adapter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A React + Vite dApp to connect a Solana wallet and request a Devnet SOL airdrop, built with the Solana Wallet Adapter.",
+  "license": "MIT",
+  "author": "Shreyash Naik",
+  "homepage": "https://github.com/shrxyeh/solana-web3-wallet-adapter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shrxyeh/solana-web3-wallet-adapter.git"
+  },
+  "keywords": [
+    "solana",
+    "web3",
+    "wallet-adapter",
+    "airdrop",
+    "devnet",
+    "react",
+    "vite"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-phantom": "^0.9.24",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-solflare": "^0.6.28",
+    "@solana/web3.js": "^1.98.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "vite": "^7.1.2"
+  }
+}
