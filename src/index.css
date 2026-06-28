@@ -1,0 +1,283 @@
+:root {
+  --bg: #0b0f1a;
+  --bg-accent: #131a2e;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --text: #e8ecf5;
+  --text-muted: #9aa6c0;
+  --solana-purple: #9945ff;
+  --solana-green: #14f195;
+  --danger: #ff6b6b;
+
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(153, 69, 255, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 10% 10%, rgba(20, 241, 149, 0.12), transparent 55%),
+    var(--bg);
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 640px;
+  padding: 32px 20px 48px;
+}
+
+/* ---------- Layout ---------- */
+.app-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--solana-purple), var(--solana-green));
+  box-shadow: 0 0 24px rgba(153, 69, 255, 0.5);
+}
+
+.app-header h1 {
+  font-size: 1.9rem;
+  margin: 0;
+  background: linear-gradient(90deg, var(--solana-purple), var(--solana-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  color: var(--text-muted);
+  margin: 10px auto 14px;
+  max-width: 440px;
+  line-height: 1.5;
+}
+
+.network-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--solana-green);
+  background: rgba(20, 241, 149, 0.1);
+  border: 1px solid rgba(20, 241, 149, 0.3);
+  border-radius: 999px;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 22px;
+  backdrop-filter: blur(8px);
+}
+
+.card-title {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ---------- Wallet details ---------- */
+.wallet-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--card-border);
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.hint {
+  color: var(--text-muted);
+  margin: 16px 0 0;
+  font-size: 0.92rem;
+}
+
+/* ---------- Presets & inputs ---------- */
+.presets {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.15s ease;
+}
+
+.chip:hover {
+  border-color: var(--solana-purple);
+  color: var(--text);
+}
+
+.chip-active {
+  background: rgba(153, 69, 255, 0.18);
+  border-color: var(--solana-purple);
+  color: #fff;
+}
+
+.amount-input {
+  flex: 1;
+  min-width: 140px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.amount-input:focus {
+  outline: none;
+  border-color: var(--solana-purple);
+  box-shadow: 0 0 0 3px rgba(153, 69, 255, 0.2);
+}
+
+/* ---------- Buttons ---------- */
+.primary-button {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0b0f1a;
+  background: linear-gradient(135deg, var(--solana-green), #3dd6a0);
+  cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+
+.primary-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: var(--solana-purple);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 2px 4px;
+}
+
+.link-button:hover {
+  color: var(--solana-green);
+}
+
+/* ---------- Status ---------- */
+.status {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.status-success {
+  background: rgba(20, 241, 149, 0.1);
+  border: 1px solid rgba(20, 241, 149, 0.3);
+}
+
+.status-error {
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  color: #ffc9c9;
+}
+
+.explorer-link {
+  color: var(--solana-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.explorer-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.app-footer {
+  margin-top: 32px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+/* ---------- Wallet-adapter overrides ---------- */
+.wallet-adapter-button-trigger {
+  background: linear-gradient(135deg, var(--solana-purple), #7a32d6) !important;
+  border-radius: 10px !important;
+}
+
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 1.55rem;
+  }
+}
